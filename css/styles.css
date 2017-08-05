@@ -199,7 +199,6 @@ figure {
 /*-----------------------------------------------------------------------*/
 /*RESPONSIVE STYLES BELOW*/
 /*-----------------------------------------------------------------------*/
-
 /*768px BELOW*/
 /*-----------------------------------------------------------------------*/
 
@@ -208,12 +207,77 @@ figure {
 /*Nav Bar*/
   .site-nav {
   position: fixed;
-  bottom: 0;
   left: 0;
   top: 0;
+  background-color: #ffffff;
+  width: 100px;
+  margin-top: 100px;
+  }
+
+  .site-logo {
+    position: fixed;
+    left: 10px;
+  }
+
+  .site-nav-item {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+  }
+
+
+/*Movie posters and details */
+
+article {
+  width: 100%;
+  display: block;
+}
+
+  .movie-overview {
+    display: inline-block;
+  }
+
+  main {
+    margin-left: 100px;
+    /*width: 100%;
+    display: block;*/
+  }
+
+/*Footer*/
+  body {
+    padding-bottom: 0;
+  }
+
+  footer {
+    margin-left: 6rem;
+  }
+
+  .footer-nav {
+    width: 50%;
+    float: left;
+    display: inline-block;
+  }
+
+  .about {
+    width: 50%;
+    float: right;
+    display: inline-block;
+  }
+}
+
+/*-----------------------------------------------------------------------*/
+/*992px BELOW*/
+/*-----------------------------------------------------------------------*/
+
+@media ( min-width: 992px ) {
+
+/*Nav Bar*/
+  .site-nav {
+  position: fixed;
+  left: 0;
   z-index: 100;
   background-color: #ffffff;
-  width: 115px;
+  width: 100px;
   margin-top: 100px;
   }
 
@@ -228,37 +292,59 @@ figure {
   }
 
   .site-nav {
-    margin-top: 150px;
+    margin-top: 100px;
   }
 
 /*Movie posters and details */
-  .movie-poster, .movie-backdrop {
-    width: 91%;
-    margin-left: 115px;
+  main article:not(:first-child) img:not(:first-child) {
+    display: none;
   }
 
-  .movie-details {
-    width: 91%;
-    margin-left: 115px;
+  main article:not(:first-child) img:first-child {
+    display: inline-block;
   }
+
+  main article:first-child img:not(:first-child) {
+    display: inline-block;
+    width: 100%;
+  }
+
+  main article:first-child p {
+    display: inline-block;
+  }
+
+  main article:not(:first-child) {
+    width: 33.33%;
+    float: left;
+  }
+
+  main article:last-child {
+    width: 100%;
+  }
+
+  main article:last-child img:first-child {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .movie-overview:first-child {
+    display: inline;
+    font-size: 1.5em;
+  }
+
 
   .movie-overview {
-    display:  inline;
+    display:  inline-block;
+    display: none;
   }
 
-  /*Footer*/
+  main {
+    margin-left: 100px;
+  }
+
+/*Footer*/
   body {
     padding-bottom: 0;
-  }
-
-  .site-footer {
-    margin-left: 115px;
-    width: 91%;
-  }
-
-  .footer-nav, .about {
-    width: 49.5%;
-    display: inline-block;
   }
 
 }
